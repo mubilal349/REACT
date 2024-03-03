@@ -7,17 +7,17 @@
 
 header {
     background: var(--primary-color);
-    padding: 10px;
-    position: sticky;
-    top: 0;
-    background-color: #fff; /* Change the background color as needed */
-    z-index: 1000;
+    padding: 15px;
 }
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 ul {
@@ -32,11 +32,24 @@ a {
     text-decoration: none;
     color: var(--tertiary-color);
     padding: 20px;
+    position : relative;
 }
 
 a:hover {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
+a:hover::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
+    border: 2px solid #3498db; 
+    background-color: #3498db;
+    border-radius: 5px;
+    z-index: -1;
+  }
 
 h1,
 p {
@@ -75,3 +88,4 @@ h1 {
     font-size: 20px;
     font-family:"poppins",san-serif;
 }
+
