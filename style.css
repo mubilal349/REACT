@@ -1,0 +1,77 @@
+
+:root {
+    --primary-color: #000000;
+    --secondary-color: #789afc;
+    --tertiary-color: #ffffff;
+}
+
+header {
+    background: var(--primary-color);
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: #fff; /* Change the background color as needed */
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+    padding: 20px;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+h1,
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "poppins",san-serif;
+    font-size: 15px;
+}
+
+h1 {
+    padding-top: 100px;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    color: #3498db;
+    /* Example text color */
+    margin-top: 20px;
+    /* Adjust margin based on your design */
+    animation: rotateAnimation 5s infinite linear;
+}
+.ppp{
+    font-size: 20px;
+    font-family:"poppins",san-serif;
+}
