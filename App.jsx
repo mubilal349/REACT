@@ -30,12 +30,20 @@ import ComponentParent from '../components/ParentComponent';
 
 function App() {
 
-  const [Color, setColor] = useState('#000');
+  const [Color, setColor] = useState('red');
 
-
+  const handleClick = () => {
+    setColor("green"); // Change to green when clicked
+  };
   return (
     <>
-      <h1>Color is { Color}</h1>
+      <h1>Color is {Color}</h1><br />
+      <button
+      onClick={handleClick}
+      style={{ backgroundColor: Color, color: "white", padding: "10px 20px" }}
+    >
+      Click Me
+    </button>
       <button type='button'
         onClick={()=>{setColor('blue')}}
       >
@@ -44,12 +52,12 @@ function App() {
       <button type='button'
         onClick={()=>{setColor('green')}}
       >
-        Blue
+        Green
       </button>
       <button type='button'
         onClick={()=>{setColor('yellow')}}
       >
-        Blue
+        Yellow
       </button>
     </>
   )
