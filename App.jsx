@@ -20,49 +20,40 @@ import FunctionalComponent from '../components/FunctionalComponent'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import './index.css'
 import React from 'react';
-import reactDom from 'react-dom/client'
-import ReactDOM from 'react-dom/client';
+import ReactDOM from "react-dom/client";
 import About from '../components/comp'
 import Count from '../components/count'
 import StudentCard from '../components/name and course'
 import ComponentParent from '../components/ParentComponent';
 
 function App() {
-  // const [username1, setUsername1] = useState('');
 
-  // const SubmitHandler = (e) => {
-  //   e.preventDefault(e)
-  //   console.log('Submitted');
-    
-  // }
+  const [Color, setColor] = useState('#000');
 
-  function FauriteColor() {
-    const [color, setColor] = useState('red');
-  }
 
   return (
     <>
-      <h1>My favourite color is. {color}</h1>
-      {/* <form>
-        <label>
-          Enter your name:
-          <input
-            type="text"
-            value={username1}
-            placeholder='Enter your name '
-            onChange={(e) => {
-              e.preventDefault(e)
-              setUsername1(e.target.value)
-              console.log(e.target.value);
-              
-            }}
-          /> <br />
-          <button  onClick={SubmitHandler}>Submit</button>
-        </label>
-      </form> */}
+      <h1>Color is { Color}</h1>
+      <button type='button'
+        onClick={()=>{setColor('blue')}}
+      >
+        Blue
+      </button>
+      <button type='button'
+        onClick={()=>{setColor('green')}}
+      >
+        Blue
+      </button>
+      <button type='button'
+        onClick={()=>{setColor('yellow')}}
+      >
+        Blue
+      </button>
     </>
   )
+  
 }
 
 export default App
